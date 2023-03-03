@@ -65,17 +65,6 @@ class DefaultSettings:
          client.utils.apply_buffered_changes()
          time.sleep (3)
          client.utils.sync_buffered_reasoner()
-         #for x in suspects:
-          #  if client.query.check_ind_exists(x):
-            #   print ("Item", x,"is present")
-         #for x in weapons:
-          #  if client.query.check_ind_exists(x):
-             #  print ("Item", x,"is present")
-         #for x in rooms:
-            #if client.query.check_ind_exists(x):
-          #     print ("Item", x,"is present")
-        
-     
                     
                     
 if __name__ == "__main__":
