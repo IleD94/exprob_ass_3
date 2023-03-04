@@ -1,0 +1,75 @@
+\hypertarget{classcluedo__fsm_1_1_query}{}\doxysection{cluedo\+\_\+fsm.\+Query Class Reference}
+\label{classcluedo__fsm_1_1_query}\index{cluedo\_fsm.Query@{cluedo\_fsm.Query}}
+
+
+Inheritance diagram for cluedo\+\_\+fsm.\+Query\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=185pt]{classcluedo__fsm_1_1_query__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for cluedo\+\_\+fsm.\+Query\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=185pt]{classcluedo__fsm_1_1_query__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classcluedo__fsm_1_1_query_af955f12e64719e4d51eb8765b085ae90}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self)
+\item 
+def \mbox{\hyperlink{classcluedo__fsm_1_1_query_aa6d65ccbeddab27fe7ada4be5e2c1d5f}{execute}} (self, userdata)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}Class Query is the second state of the cluedo fsm.
+Here the robot checks if the hypothesis is complete and not inconsistent, talking
+with the armor server using the api of the armor client,
+if it is in this way it goes to the third state ORACLE to make the accusation and
+check if it is the winning hypothesis, otherwise it returns to the state1. If the
+hint was found on the way, it returns to the state 1, in order to reach the room
+object of the goal.
+\end{DoxyVerb}
+ 
+
+Definition at line 348 of file cluedo\+\_\+fsm.\+py.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classcluedo__fsm_1_1_query_af955f12e64719e4d51eb8765b085ae90}\label{classcluedo__fsm_1_1_query_af955f12e64719e4d51eb8765b085ae90}} 
+\index{cluedo\_fsm.Query@{cluedo\_fsm.Query}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!cluedo\_fsm.Query@{cluedo\_fsm.Query}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def cluedo\+\_\+fsm.\+Query.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Definition at line 358 of file cluedo\+\_\+fsm.\+py.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classcluedo__fsm_1_1_query_aa6d65ccbeddab27fe7ada4be5e2c1d5f}\label{classcluedo__fsm_1_1_query_aa6d65ccbeddab27fe7ada4be5e2c1d5f}} 
+\index{cluedo\_fsm.Query@{cluedo\_fsm.Query}!execute@{execute}}
+\index{execute@{execute}!cluedo\_fsm.Query@{cluedo\_fsm.Query}}
+\doxysubsubsection{\texorpdfstring{execute()}{execute()}}
+{\footnotesize\ttfamily def cluedo\+\_\+fsm.\+Query.\+execute (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{userdata }\end{DoxyParamCaption})}
+
+
+
+Definition at line 365 of file cluedo\+\_\+fsm.\+py.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+scripts/\mbox{\hyperlink{cluedo__fsm_8py}{cluedo\+\_\+fsm.\+py}}\end{DoxyCompactItemize}

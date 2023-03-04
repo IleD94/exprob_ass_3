@@ -1,0 +1,234 @@
+\hypertarget{simulation_8cpp}{}\doxysection{src/simulation.cpp File Reference}
+\label{simulation_8cpp}\index{src/simulation.cpp@{src/simulation.cpp}}
+{\ttfamily \#include $<$ros/ros.\+h$>$}\newline
+{\ttfamily \#include $<$exp\+\_\+assignment3/\+Erl\+Oracle.\+h$>$}\newline
+{\ttfamily \#include $<$exp\+\_\+assignment3/\+Oracle.\+h$>$}\newline
+{\ttfamily \#include $<$exp\+\_\+assignment3/\+Marker.\+h$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$time.\+h$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+Include dependency graph for simulation.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{simulation_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{simulation_8cpp_a6e6dc804bf3a90871abb803324ac79bf}{oracle\+Service}} (exp\+\_\+assignment3\+::\+Oracle\+::\+Request \&req, exp\+\_\+assignment3\+::\+Oracle\+::\+Response \&res)
+\item 
+bool \mbox{\hyperlink{simulation_8cpp_ad9cf714dd0ccfe55b69a3f8ac68c60df}{oracle\+Callback}} (exp\+\_\+assignment3\+::\+Marker\+::\+Request \&req, exp\+\_\+assignment3\+::\+Marker\+::\+Response \&res)
+\item 
+int \mbox{\hyperlink{simulation_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}{main}} (int argc, char $\ast$$\ast$argv)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+ros\+::\+Publisher \mbox{\hyperlink{simulation_8cpp_a32812fe000700d7aa8988d74e59471c7}{oracle\+\_\+pub}}
+\item 
+double \mbox{\hyperlink{simulation_8cpp_a36b0204cd96e3dc326a2adfa3d1dceda}{markx}} \mbox{[}4\mbox{]}
+\item 
+double \mbox{\hyperlink{simulation_8cpp_a0bc4146f286fe42bd5e8fa1e53826447}{marky}} \mbox{[}4\mbox{]}
+\item 
+double \mbox{\hyperlink{simulation_8cpp_a8d90002e6a9c50028f184b22c380efc4}{markz}} \mbox{[}4\mbox{]}
+\item 
+double \mbox{\hyperlink{simulation_8cpp_a412ed4d68a81f370cdcd20e3019db982}{lastmarkx}} = 0.\+0
+\item 
+double \mbox{\hyperlink{simulation_8cpp_a174c0dfc727a92493b03f7b0573f4f3e}{lastmarky}} = 0.\+0
+\item 
+const std\+::string \mbox{\hyperlink{simulation_8cpp_a0049a8a39c319bf1470f36c9e0f75abd}{key}} \mbox{[}3\mbox{]} = \{\char`\"{}who\char`\"{}, \char`\"{}what\char`\"{}, \char`\"{}where\char`\"{}\}
+\item 
+const std\+::string \mbox{\hyperlink{simulation_8cpp_a68fa6a0c7a1208892294604263e23d92}{person}} \mbox{[}6\mbox{]} = \{\char`\"{}Miss\+Scarlett\char`\"{}, \char`\"{}Colonel\+Mustard\char`\"{}, \char`\"{}Mrs\+White\char`\"{}, \char`\"{}Mr\+Green\char`\"{}, \char`\"{}Mrs\+Peacock\char`\"{}, \char`\"{}Prof\+Plum\char`\"{}\}
+\item 
+const std\+::string \mbox{\hyperlink{simulation_8cpp_a4368e40a20e72e62974037baf19dba80}{object}} \mbox{[}6\mbox{]} = \{\char`\"{}candlestick\char`\"{}, \char`\"{}dagger\char`\"{}, \char`\"{}lead\+Pipe\char`\"{}, \char`\"{}revolver\char`\"{}, \char`\"{}rope\char`\"{}, \char`\"{}spanner\char`\"{}\}
+\item 
+const std\+::string \mbox{\hyperlink{simulation_8cpp_a5e5bd50ead53d20df3f8ede527f47ce7}{place}} \mbox{[}9\mbox{]} = \{\char`\"{}conservatory\char`\"{}, \char`\"{}lounge\char`\"{}, \char`\"{}kitchen\char`\"{}, \char`\"{}library\char`\"{}, \char`\"{}hall\char`\"{}, \char`\"{}study\char`\"{}, \char`\"{}bathroom\char`\"{}, \char`\"{}dining\+Room\char`\"{}, \char`\"{}billiard\+Room\char`\"{}\}
+\item 
+int \mbox{\hyperlink{simulation_8cpp_a37d4a0b625b8b9583adf9362f5aae971}{u\+I\+Ds}} \mbox{[}3\mbox{]} =\{-\/1,-\/1\}
+\item 
+int \mbox{\hyperlink{simulation_8cpp_a90c5d03e068ddae91702223f47eff712}{win\+ID}} = -\/1
+\item 
+int \mbox{\hyperlink{simulation_8cpp_ab5f3446a47fbb2ab4e388c5f5e6674df}{marker\+ID}} \mbox{[}30\mbox{]}
+\item 
+exp\+\_\+assignment3\+::\+Erl\+Oracle \mbox{\hyperlink{simulation_8cpp_a97ba42f85761fcf138f3b2b41a2ab619}{oracle\+\_\+msgs}} \mbox{[}30\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{simulation_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}\label{simulation_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}} 
+\index{simulation.cpp@{simulation.cpp}!main@{main}}
+\index{main@{main}!simulation.cpp@{simulation.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$$\ast$}]{argv }\end{DoxyParamCaption})}
+
+
+
+Definition at line 45 of file simulation.\+cpp.
+
+\mbox{\Hypertarget{simulation_8cpp_ad9cf714dd0ccfe55b69a3f8ac68c60df}\label{simulation_8cpp_ad9cf714dd0ccfe55b69a3f8ac68c60df}} 
+\index{simulation.cpp@{simulation.cpp}!oracleCallback@{oracleCallback}}
+\index{oracleCallback@{oracleCallback}!simulation.cpp@{simulation.cpp}}
+\doxysubsubsection{\texorpdfstring{oracleCallback()}{oracleCallback()}}
+{\footnotesize\ttfamily bool oracle\+Callback (\begin{DoxyParamCaption}\item[{exp\+\_\+assignment3\+::\+Marker\+::\+Request \&}]{req,  }\item[{exp\+\_\+assignment3\+::\+Marker\+::\+Response \&}]{res }\end{DoxyParamCaption})}
+
+
+
+Definition at line 39 of file simulation.\+cpp.
+
+\mbox{\Hypertarget{simulation_8cpp_a6e6dc804bf3a90871abb803324ac79bf}\label{simulation_8cpp_a6e6dc804bf3a90871abb803324ac79bf}} 
+\index{simulation.cpp@{simulation.cpp}!oracleService@{oracleService}}
+\index{oracleService@{oracleService}!simulation.cpp@{simulation.cpp}}
+\doxysubsubsection{\texorpdfstring{oracleService()}{oracleService()}}
+{\footnotesize\ttfamily bool oracle\+Service (\begin{DoxyParamCaption}\item[{exp\+\_\+assignment3\+::\+Oracle\+::\+Request \&}]{req,  }\item[{exp\+\_\+assignment3\+::\+Oracle\+::\+Response \&}]{res }\end{DoxyParamCaption})}
+
+
+
+Definition at line 33 of file simulation.\+cpp.
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{simulation_8cpp_a0049a8a39c319bf1470f36c9e0f75abd}\label{simulation_8cpp_a0049a8a39c319bf1470f36c9e0f75abd}} 
+\index{simulation.cpp@{simulation.cpp}!key@{key}}
+\index{key@{key}!simulation.cpp@{simulation.cpp}}
+\doxysubsubsection{\texorpdfstring{key}{key}}
+{\footnotesize\ttfamily const std\+::string key\mbox{[}3\mbox{]} = \{\char`\"{}who\char`\"{}, \char`\"{}what\char`\"{}, \char`\"{}where\char`\"{}\}}
+
+
+
+Definition at line 20 of file simulation.\+cpp.
+
+\mbox{\Hypertarget{simulation_8cpp_a412ed4d68a81f370cdcd20e3019db982}\label{simulation_8cpp_a412ed4d68a81f370cdcd20e3019db982}} 
+\index{simulation.cpp@{simulation.cpp}!lastmarkx@{lastmarkx}}
+\index{lastmarkx@{lastmarkx}!simulation.cpp@{simulation.cpp}}
+\doxysubsubsection{\texorpdfstring{lastmarkx}{lastmarkx}}
+{\footnotesize\ttfamily double lastmarkx = 0.\+0}
+
+
+
+Definition at line 17 of file simulation.\+cpp.
+
+\mbox{\Hypertarget{simulation_8cpp_a174c0dfc727a92493b03f7b0573f4f3e}\label{simulation_8cpp_a174c0dfc727a92493b03f7b0573f4f3e}} 
+\index{simulation.cpp@{simulation.cpp}!lastmarky@{lastmarky}}
+\index{lastmarky@{lastmarky}!simulation.cpp@{simulation.cpp}}
+\doxysubsubsection{\texorpdfstring{lastmarky}{lastmarky}}
+{\footnotesize\ttfamily double lastmarky = 0.\+0}
+
+
+
+Definition at line 18 of file simulation.\+cpp.
+
+\mbox{\Hypertarget{simulation_8cpp_ab5f3446a47fbb2ab4e388c5f5e6674df}\label{simulation_8cpp_ab5f3446a47fbb2ab4e388c5f5e6674df}} 
+\index{simulation.cpp@{simulation.cpp}!markerID@{markerID}}
+\index{markerID@{markerID}!simulation.cpp@{simulation.cpp}}
+\doxysubsubsection{\texorpdfstring{markerID}{markerID}}
+{\footnotesize\ttfamily int marker\+ID\mbox{[}30\mbox{]}}
+
+
+
+Definition at line 28 of file simulation.\+cpp.
+
+\mbox{\Hypertarget{simulation_8cpp_a36b0204cd96e3dc326a2adfa3d1dceda}\label{simulation_8cpp_a36b0204cd96e3dc326a2adfa3d1dceda}} 
+\index{simulation.cpp@{simulation.cpp}!markx@{markx}}
+\index{markx@{markx}!simulation.cpp@{simulation.cpp}}
+\doxysubsubsection{\texorpdfstring{markx}{markx}}
+{\footnotesize\ttfamily double markx\mbox{[}4\mbox{]}}
+
+
+
+Definition at line 13 of file simulation.\+cpp.
+
+\mbox{\Hypertarget{simulation_8cpp_a0bc4146f286fe42bd5e8fa1e53826447}\label{simulation_8cpp_a0bc4146f286fe42bd5e8fa1e53826447}} 
+\index{simulation.cpp@{simulation.cpp}!marky@{marky}}
+\index{marky@{marky}!simulation.cpp@{simulation.cpp}}
+\doxysubsubsection{\texorpdfstring{marky}{marky}}
+{\footnotesize\ttfamily double marky\mbox{[}4\mbox{]}}
+
+
+
+Definition at line 14 of file simulation.\+cpp.
+
+\mbox{\Hypertarget{simulation_8cpp_a8d90002e6a9c50028f184b22c380efc4}\label{simulation_8cpp_a8d90002e6a9c50028f184b22c380efc4}} 
+\index{simulation.cpp@{simulation.cpp}!markz@{markz}}
+\index{markz@{markz}!simulation.cpp@{simulation.cpp}}
+\doxysubsubsection{\texorpdfstring{markz}{markz}}
+{\footnotesize\ttfamily double markz\mbox{[}4\mbox{]}}
+
+
+
+Definition at line 15 of file simulation.\+cpp.
+
+\mbox{\Hypertarget{simulation_8cpp_a4368e40a20e72e62974037baf19dba80}\label{simulation_8cpp_a4368e40a20e72e62974037baf19dba80}} 
+\index{simulation.cpp@{simulation.cpp}!object@{object}}
+\index{object@{object}!simulation.cpp@{simulation.cpp}}
+\doxysubsubsection{\texorpdfstring{object}{object}}
+{\footnotesize\ttfamily const std\+::string object\mbox{[}6\mbox{]} = \{\char`\"{}candlestick\char`\"{}, \char`\"{}dagger\char`\"{}, \char`\"{}lead\+Pipe\char`\"{}, \char`\"{}revolver\char`\"{}, \char`\"{}rope\char`\"{}, \char`\"{}spanner\char`\"{}\}}
+
+
+
+Definition at line 22 of file simulation.\+cpp.
+
+\mbox{\Hypertarget{simulation_8cpp_a97ba42f85761fcf138f3b2b41a2ab619}\label{simulation_8cpp_a97ba42f85761fcf138f3b2b41a2ab619}} 
+\index{simulation.cpp@{simulation.cpp}!oracle\_msgs@{oracle\_msgs}}
+\index{oracle\_msgs@{oracle\_msgs}!simulation.cpp@{simulation.cpp}}
+\doxysubsubsection{\texorpdfstring{oracle\_msgs}{oracle\_msgs}}
+{\footnotesize\ttfamily exp\+\_\+assignment3\+::\+Erl\+Oracle oracle\+\_\+msgs\mbox{[}30\mbox{]}}
+
+
+
+Definition at line 29 of file simulation.\+cpp.
+
+\mbox{\Hypertarget{simulation_8cpp_a32812fe000700d7aa8988d74e59471c7}\label{simulation_8cpp_a32812fe000700d7aa8988d74e59471c7}} 
+\index{simulation.cpp@{simulation.cpp}!oracle\_pub@{oracle\_pub}}
+\index{oracle\_pub@{oracle\_pub}!simulation.cpp@{simulation.cpp}}
+\doxysubsubsection{\texorpdfstring{oracle\_pub}{oracle\_pub}}
+{\footnotesize\ttfamily ros\+::\+Publisher oracle\+\_\+pub}
+
+
+
+Definition at line 11 of file simulation.\+cpp.
+
+\mbox{\Hypertarget{simulation_8cpp_a68fa6a0c7a1208892294604263e23d92}\label{simulation_8cpp_a68fa6a0c7a1208892294604263e23d92}} 
+\index{simulation.cpp@{simulation.cpp}!person@{person}}
+\index{person@{person}!simulation.cpp@{simulation.cpp}}
+\doxysubsubsection{\texorpdfstring{person}{person}}
+{\footnotesize\ttfamily const std\+::string person\mbox{[}6\mbox{]} = \{\char`\"{}Miss\+Scarlett\char`\"{}, \char`\"{}Colonel\+Mustard\char`\"{}, \char`\"{}Mrs\+White\char`\"{}, \char`\"{}Mr\+Green\char`\"{}, \char`\"{}Mrs\+Peacock\char`\"{}, \char`\"{}Prof\+Plum\char`\"{}\}}
+
+
+
+Definition at line 21 of file simulation.\+cpp.
+
+\mbox{\Hypertarget{simulation_8cpp_a5e5bd50ead53d20df3f8ede527f47ce7}\label{simulation_8cpp_a5e5bd50ead53d20df3f8ede527f47ce7}} 
+\index{simulation.cpp@{simulation.cpp}!place@{place}}
+\index{place@{place}!simulation.cpp@{simulation.cpp}}
+\doxysubsubsection{\texorpdfstring{place}{place}}
+{\footnotesize\ttfamily const std\+::string place\mbox{[}9\mbox{]} = \{\char`\"{}conservatory\char`\"{}, \char`\"{}lounge\char`\"{}, \char`\"{}kitchen\char`\"{}, \char`\"{}library\char`\"{}, \char`\"{}hall\char`\"{}, \char`\"{}study\char`\"{}, \char`\"{}bathroom\char`\"{}, \char`\"{}dining\+Room\char`\"{}, \char`\"{}billiard\+Room\char`\"{}\}}
+
+
+
+Definition at line 23 of file simulation.\+cpp.
+
+\mbox{\Hypertarget{simulation_8cpp_a37d4a0b625b8b9583adf9362f5aae971}\label{simulation_8cpp_a37d4a0b625b8b9583adf9362f5aae971}} 
+\index{simulation.cpp@{simulation.cpp}!uIDs@{uIDs}}
+\index{uIDs@{uIDs}!simulation.cpp@{simulation.cpp}}
+\doxysubsubsection{\texorpdfstring{uIDs}{uIDs}}
+{\footnotesize\ttfamily int u\+I\+Ds\mbox{[}3\mbox{]} =\{-\/1,-\/1\}}
+
+
+
+Definition at line 25 of file simulation.\+cpp.
+
+\mbox{\Hypertarget{simulation_8cpp_a90c5d03e068ddae91702223f47eff712}\label{simulation_8cpp_a90c5d03e068ddae91702223f47eff712}} 
+\index{simulation.cpp@{simulation.cpp}!winID@{winID}}
+\index{winID@{winID}!simulation.cpp@{simulation.cpp}}
+\doxysubsubsection{\texorpdfstring{winID}{winID}}
+{\footnotesize\ttfamily int win\+ID = -\/1}
+
+
+
+Definition at line 26 of file simulation.\+cpp.
+

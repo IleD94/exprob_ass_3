@@ -1,0 +1,97 @@
+\hypertarget{move__arm_8cpp}{}\doxysection{src/move\+\_\+arm.cpp File Reference}
+\label{move__arm_8cpp}\index{src/move\_arm.cpp@{src/move\_arm.cpp}}
+
+
+this node implements the configuration poses of the robot.  
+
+
+{\ttfamily \#include $<$ros/ros.\+h$>$}\newline
+{\ttfamily \#include $<$moveit/move\+\_\+group\+\_\+interface/move\+\_\+group\+\_\+interface.\+h$>$}\newline
+{\ttfamily \#include $<$exp\+\_\+assignment3/\+Move\+Arm.\+h$>$}\newline
+Include dependency graph for move\+\_\+arm.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{move__arm_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespaceexp__assignment3}{exp\+\_\+assignment3}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{move__arm_8cpp_a16dee7a310217f94c30e432a21edf11c}{Go\+To\+Pose}} (exp\+\_\+assignment3\+::\+Move\+Arm\+::\+Request \&req, exp\+\_\+assignment3\+::\+Move\+Arm\+::\+Response \&res)
+\begin{DoxyCompactList}\small\item\em Callback function of the myarm\+\_\+pose service. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{move__arm_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}{main}} (int argc, char $\ast$$\ast$argv)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+this node implements the configuration poses of the robot. 
+
+\begin{DoxyAuthor}{Author}
+Ilenia D\textquotesingle{}Agelo 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+27/02/2023
+\end{DoxyDate}
+Subscribes to\+: ~\newline
+ None
+
+Publishes to\+: ~\newline
+ None
+
+Serivces\+: ~\newline
+ myarm\+\_\+pose
+
+Client Services\+: ~\newline
+ None
+
+Action Client\+: ~\newline
+ None
+
+Description\+: ~\newline
+ In this node are implemented the possible poses of the robot during the game, they were previously implemeted thanks to the moveit setup assistant. The service myarm\+\_\+pose allows the choose of the pose by the client that sends a string as request. 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{move__arm_8cpp_a16dee7a310217f94c30e432a21edf11c}\label{move__arm_8cpp_a16dee7a310217f94c30e432a21edf11c}} 
+\index{move\_arm.cpp@{move\_arm.cpp}!GoToPose@{GoToPose}}
+\index{GoToPose@{GoToPose}!move\_arm.cpp@{move\_arm.cpp}}
+\doxysubsubsection{\texorpdfstring{GoToPose()}{GoToPose()}}
+{\footnotesize\ttfamily bool Go\+To\+Pose (\begin{DoxyParamCaption}\item[{exp\+\_\+assignment3\+::\+Move\+Arm\+::\+Request \&}]{req,  }\item[{exp\+\_\+assignment3\+::\+Move\+Arm\+::\+Response \&}]{res }\end{DoxyParamCaption})}
+
+
+
+Callback function of the myarm\+\_\+pose service. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em req,Move\+Arm\+Request} & \\
+\hline
+{\em res,Move\+Arm\+Response} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true
+\end{DoxyReturn}
+This function is the callback function of the myarm\+\_\+pose service the robot can be in the zero pose or in the investigation pose. This poses can be selected by the client. 
+
+Definition at line 50 of file move\+\_\+arm.\+cpp.
+
+\mbox{\Hypertarget{move__arm_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}\label{move__arm_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}} 
+\index{move\_arm.cpp@{move\_arm.cpp}!main@{main}}
+\index{main@{main}!move\_arm.cpp@{move\_arm.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$$\ast$}]{argv }\end{DoxyParamCaption})}
+
+
+
+Definition at line 84 of file move\+\_\+arm.\+cpp.
+
