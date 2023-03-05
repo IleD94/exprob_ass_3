@@ -11,6 +11,7 @@ The coordinates of the rooms are:
 - Room4:[5,-7] , 
 - Room5:[5,-3], 
 - Room6:[5,1].
+
 To have general information about the game please go to the [first repository](https://github.com/IleD94/exprob_ass_1) of this project.
 
 ## Robot model
