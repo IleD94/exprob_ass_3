@@ -39,10 +39,10 @@ Below the investigation pose:
 3. *marker_publish*: This is a C++ ROS node that uses the ArUco library to detect and publish the IDs of ArUco markers visible in a camera image. The node subscribes to the /image topic, which should be of type sensor_msgs/Image, and publishes the detected marker IDs on the /aruco/marker_id topic, which is of type std_msgs/Int32.
 The node initializes the ArUco marker detector and camera parameters, and then defines a callback function called image_callback that is executed whenever an image message is received on the /image topic. The callback function converts the image message to a cv::Mat object, detects the markers in the image using the mDetector_.detect function, and then publishes the detected marker IDs on the /aruco/marker_id topic.
 4. *cluedo_fsm*: This node manages all the part of the game using a state machine. It has 4 states: Exploration, LookAround, Query and myOracle.
-- Exploration: In this state the robot sets its arm to the zero position and using move_base package goes to a chosen randomly room among those in the list. If during the movement it can catch a aruco marker, it stops and goes to the LookAround state to check if the marker was already detected before. This state restart from the point where the robot stop to complete the task of reaching that specific room.
-- LookAround:  in this state the robot moves the arm to the invastigation pose and start to spin, if the robot reached the room, to detect a marker. If the marker is detected it goes to the Query state to check the completeness and the consistency of the hypothesis, otherwise it continues to spin until it does about 2 rounds.
-- Query: in this state the robot checks the consistency and the completeness of the hypothesis found, using the armor services. If the hypothesis is consistent and was not checked to the oracle yet.
-- Oracle: this is the last state of the machine. Here the robot check if the consistent hypothesis found is the winning one or not. If it is, Detective Bot wins the game, otherwise it goes again to the exploration stage.
+- **Exploration**: In this state the robot sets its arm to the zero position and using move_base package goes to a chosen randomly room among those in the list. If during the movement it can catch a aruco marker, it stops and goes to the LookAround state to check if the marker was already detected before. This state restart from the point where the robot stop to complete the task of reaching that specific room.
+- **LookAround**:  in this state the robot moves the arm to the invastigation pose and start to spin, if the robot reached the room, to detect a marker. If the marker is detected it goes to the Query state to check the completeness and the consistency of the hypothesis, otherwise it continues to spin until it does about 2 rounds.
+- **Query**: in this state the robot checks the consistency and the completeness of the hypothesis found, using the armor services. If the hypothesis is consistent and was not checked to the oracle yet.
+- **Oracle**: this is the last state of the machine. Here the robot check if the consistent hypothesis found is the winning one or not. If it is, Detective Bot wins the game, otherwise it goes again to the exploration stage.
 ### State Machine
 ![image](https://user-images.githubusercontent.com/80365922/222980920-b4fce1bf-a8dd-4914-a87d-7bac968efb4a.png)
 
@@ -88,6 +88,10 @@ rosrun exprob_ass_3 user_interface.py
 ```
 
 ## Video
+
+
+https://user-images.githubusercontent.com/80365922/222982019-e6af0b26-29a5-48c6-a406-5bae81f94757.mp4
+
 
 
 ## Contacts
