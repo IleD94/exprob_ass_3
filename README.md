@@ -102,7 +102,7 @@ https://user-images.githubusercontent.com/80365922/222982019-e6af0b26-29a5-48c6-
 ## System's limitations
 A possible limitation in the system is in the camera, unfortunatly can happen that it can't detect some markers. It can happen because move_base can set different paths everytime to reach the rooms and in some little cases could happen that we can't find the solution or the robot can't reach the right position to detect one marker. In any case it is really unlikely event.
 
-## Possible improvements:
+## Possible improvements
 To improve the system we could change the parameters of the camera in such a way that it can detects all the markers, for example improving resolution or changing the angle of detection for the markers.
 
 ## Contacts
