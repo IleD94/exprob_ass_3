@@ -4,12 +4,13 @@
 This project is the third part out of three of the implementation of Cluedo Game in simulated environment. In this part we have implemented the architecture of the game, the real movement of the player, a robot Detective, on gazebo simuator and the perception part, using a camera and some markers to detect in the environment. The architecture is divided in three main part: perception, implemented in the last part using aruco_ros package, action, fully implemented using moveit package and move_base package and planning, that actually is simulated using a final state machine, with the smach ros package. 
 The rules of the game are simple. There was a omicide, Mr. Black was killed by someone, somewhere with some weapon. There is a detective, Detective Bot, that goes around (in gazebo envoronment) to find hints to solve the case. Hints can be found looking at some aruco markers positionated on cubes in several places of the environment. In the world simulated there are 6 rooms, each of them has 5 aruco markers that can be found at different heights.
 The coordinates of the rooms are: 
-'Room1': [-4,-3], 
-'Room2': [-4,2], 
-'Room3': [-4,7], 
-'Room4':[5,-7] , 
-'Room5':[5,-3], 
-'Room6':[5,1].
+
+- Room1: [-4,-3], 
+- Room2: [-4,2], 
+- Room3: [-4,7], 
+- Room4:[5,-7] , 
+- Room5:[5,-3], 
+- Room6:[5,1].
 To have general information about the game please go to the [first repository](https://github.com/IleD94/exprob_ass_1) of this project.
 
 ## Robot model
