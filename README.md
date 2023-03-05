@@ -20,10 +20,13 @@ Like in the second part of the project, even in this part we have a provided our
 1. *zero*: It is used to move from a room to another
 2. *investigation* is the position used inside a room to look around to find aruco markers. At some point, if the robot could catch some markers, it starts to move from a room to another keeping the investigation pose.
 Below the zero pose:
+
 ![zero_pose](https://user-images.githubusercontent.com/80365922/222979884-4b90011d-6ff3-4921-8206-b265f232ae3c.png)
 
 Below the investigation pose:
+
 ![investigation_pose](https://user-images.githubusercontent.com/80365922/222979891-8eb79df3-8489-4738-943b-d4cb5e0489b5.png)
+
 
 ## Software Architecture
 ### Component diagram
